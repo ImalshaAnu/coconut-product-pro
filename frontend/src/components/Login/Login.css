@@ -1,0 +1,182 @@
+/* Basic styles for Login component */
+.login-container {
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--background-image) center/cover no-repeat;
+  z-index: 1;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  padding: 40px 32px 32px 32px;
+  max-width: 400px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 2.2rem;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.login-header p {
+  color: #555;
+  margin-top: 8px;
+  font-size: 1.1rem;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #222;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f8f8f8;
+  transition: border 0.2s;
+}
+
+.form-group input:focus {
+  border: 1.5px solid #007bff;
+  outline: none;
+}
+
+.form-options {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.forgot-password {
+  color: #007bff;
+  cursor: pointer;
+  font-size: 0.98rem;
+  transition: text-decoration 0.2s;
+}
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.form_btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #23ab4c 60%, #4c7957 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.form_btn:hover {
+  background: linear-gradient(90deg, #4f7149 60%, #6f9a7a 100%);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.login-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.register-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: text-decoration 0.2s;
+}
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Forgot password styles */
+.forgot-password-header h2 {
+  margin-bottom: 8px;
+}
+.forgot-password-header p {
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.success-message {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+.error-message {
+  color: #dc3545;
+  margin-bottom: 10px;
+}
+
+.back-to-login-btn {
+  margin-top: 10px;
+  background: none;
+  color: #8eb694;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0;
+}
+.back-to-login-btn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    padding: 24px 8px 16px 8px;
+    max-width: 95vw;
+  }
+  .login-container {
+    padding: 0;
+  }
+}

@@ -1,0 +1,140 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 260px;
+  background: radial-gradient(1200px 600px at -200px -200px, #ecfdf5 0%, #d1fae5 25%, #a7f3d0 55%, #6ee7b7 80%, #34d399 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px;
+  box-shadow: 8px 0 24px rgba(0,0,0,0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+}
+
+.brand-logo {
+  font-size: 1.6rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.brand-sub {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.search-box {
+  margin: 14px 6px 10px 6px;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.98rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  margin: 4px 0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #374151;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nav-item:hover {
+  background: rgba(52, 211, 153, 0.1);
+  color: #047857;
+  transform: translateX(4px);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(52, 211, 153, 0.3);
+}
+
+.nav-icon {
+  font-size: 1.3rem;
+  width: 24px;
+  text-align: center;
+}
+
+.nav-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.help-btn,
+.logout-btn {
+  background: transparent;
+  color: #e5e7eb;
+  border: none;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.help-btn:hover,
+.logout-btn:hover {
+  background: rgba(255,255,255,0.16);
+  color: #ffffff;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  display: grid;
+  gap: 6px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+  }
+}
+
+

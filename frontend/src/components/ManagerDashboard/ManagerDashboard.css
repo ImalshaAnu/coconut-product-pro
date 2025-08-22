@@ -1,0 +1,76 @@
+/* Layout */
+.manager-dashboard { min-height: 100vh; display:grid; grid-template-columns: 260px 1fr; background: #ecfdf5; }
+.main-content { min-height: 100vh; padding: 28px; }
+
+/* Container and topbar */
+.topbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+}
+.breadcrumbs { color: #065f46; font-weight: 700; }
+.top-actions { display:flex; gap:10px; align-items:center; }
+.top-search {
+	background: #ecfdf5; border: 1px solid #a7f3d0; color:#065f46;
+	padding: 8px 12px; border-radius: 10px;
+}
+.top-btn {
+	background: linear-gradient(135deg,#a7f3d0 0%, #34d399 100%);
+	color:#064e3b; border:none; padding:8px 12px; border-radius:10px; font-weight:700; cursor:pointer;
+}
+.avatar { width:36px; height:36px; border-radius:999px; background:#d1fae5; display:flex; align-items:center; justify-content:center; color:#065f46; font-weight:800; }
+
+/* Header */
+.dashboard-header { margin: 8px 0 12px; }
+.dashboard-header h1 { margin:0 0 4px; color:#064e3b; }
+.dashboard-header p { margin:0; color:#047857; }
+
+/* Welcome hero (reuse admin look) */
+.welcome-hero {
+	background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+	border-radius: 24px;
+	padding: 24px;
+	margin-bottom: 16px;
+	display:flex; align-items:center; justify-content:space-between;
+	border:1px solid rgba(52,211,153,0.2); box-shadow:0 8px 32px rgba(52,211,153,0.1);
+}
+.welcome-content h1 { margin:0 0 6px; color:#064e3b; }
+.welcome-content p { margin:0 0 12px; color:#047857; }
+.welcome-actions { display:flex; gap:10px; flex-wrap:wrap; }
+.welcome-btn { padding:12px 18px; border-radius:12px; font-weight:700; border:none; cursor:pointer; }
+.welcome-btn.primary { background: linear-gradient(135deg,#34d399 0%, #10b981 100%); color:#fff; }
+.welcome-btn.secondary { background:#fff; border:2px solid #34d399; color:#34d399; }
+.welcome-visual .welcome-icon { font-size:56px; opacity:.85; }
+
+/* Stats */
+.stats-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; margin-bottom:16px; }
+.stat-card { background:#fff; border:1px solid #d1fae5; border-radius:14px; padding:16px; display:flex; gap:12px; align-items:center; }
+.stat-icon { font-size:24px; }
+.stat-number { font-weight:800; color:#064e3b; font-size:20px; line-height:1; }
+.stat-label { color:#065f46; font-weight:600; }
+
+/* Cards */
+.dashboard-content { display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-bottom:16px; }
+.dashboard-card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; }
+.dashboard-btn { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; padding:8px 12px; border-radius:10px; font-weight:700; cursor:pointer; }
+.category-pills { display:flex; gap:8px; flex-wrap:wrap; }
+.pill { background:#f0fdf4; border:1px solid #a7f3d0; color:#065f46; padding:6px 10px; border-radius:999px; }
+.low-stock-list { list-style:none; padding:0; margin:0; display:grid; gap:6px; }
+.badge.warn { background:#fee2e2; color:#991b1b; border:1px solid #fecaca; border-radius:999px; padding:2px 8px; margin-right:6px; font-weight:700; }
+
+/* Panels and charts */
+.panel-grid { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+.panel { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:16px; }
+.panel-header h3 { margin:0 0 10px; color:#064e3b; }
+.chart-container { height:300px; position:relative; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+	.stats-grid { grid-template-columns: repeat(2,1fr); }
+	.dashboard-content { grid-template-columns: 1fr; }
+	.panel-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+	.welcome-hero { flex-direction:column; text-align:center; gap:12px; }
+} 

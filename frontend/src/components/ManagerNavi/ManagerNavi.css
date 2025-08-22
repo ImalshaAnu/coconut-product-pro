@@ -1,0 +1,44 @@
+/* Product Manager Sidebar */
+.pm-sidebar {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	background: linear-gradient(180deg, #064e3b 0%, #065f46 100%);
+	color: #ffffff;
+	padding: 18px 14px;
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+	box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+	width: 260px;
+}
+
+.pm-brand { display:flex; align-items:center; gap:12px; padding: 6px 8px 14px; }
+.pm-logo { width: 42px; height: 42px; border-radius: 10px; background: rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; font-size: 1.4rem; }
+.pm-title { display:flex; flex-direction:column; line-height: 1.1; }
+.pm-name { font-weight: 800; letter-spacing: 0.3px; }
+.pm-role { font-size: 0.8rem; opacity: 0.8; }
+
+.pm-search { padding: 8px 6px 14px; }
+.pm-search input { width: 100%; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.18); color:#fff; padding: 10px 12px; border-radius: 10px; outline:none; }
+.pm-search input::placeholder { color: rgba(255,255,255,0.8); }
+
+.pm-nav { display:flex; flex-direction:column; gap: 6px; }
+.pm-item { display:flex; align-items:center; gap: 12px; padding: 14px 12px; border-radius: 12px; cursor:pointer; color:#e5e7eb; transition: all .2s ease; }
+.pm-item:hover { background: rgba(255,255,255,0.12); color:#ffffff; transform: translateX(4px); }
+.pm-item.active { background: rgba(255,255,255,0.18); color:#ffffff; }
+.pm-icon { width: 22px; text-align:center; font-size: 1.05rem; }
+.pm-text { font-size: 1.05rem; }
+
+.pm-footer { position:absolute; bottom: 14px; left: 14px; right: 14px; display:flex; gap:8px; }
+.pm-help, .pm-logout { flex:1; padding:10px 12px; border-radius: 10px; border: none; cursor:pointer; font-weight: 700; }
+.pm-help { background: rgba(255,255,255,0.12); color:#fff; }
+.pm-logout { background: #ef4444; color:#fff; }
+
+/* Layout helper for pages using this sidebar */
+.pm-layout { min-height: 100vh; display:grid; grid-template-columns: 260px 1fr; background: #ecfdf5; }
+.main-content { min-height: 100vh; padding: 28px; }
+
+@media (max-width: 900px) {
+	.pm-layout { grid-template-columns: 1fr; }
+	.pm-sidebar { position: relative; height:auto; width:100%; border-bottom-left-radius:16px; border-bottom-right-radius:16px; }
+}
