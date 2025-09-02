@@ -61,7 +61,12 @@ function Additem() {
 
     return (
         <div className="additem-bg">
-            <h2 className="additem-title-centered">Add New Item</h2>
+                            <div className="additem-header">
+                    <button className="back-btn" onClick={() => navigate('/manager-dashboard')}>
+                        ←
+                    </button>
+                    <h2 className="additem-title-centered">Add New Item</h2>
+                </div>
             <div className="additem-split-card">
                 <div className="additem-split-image">
                     {imagePreview ? (

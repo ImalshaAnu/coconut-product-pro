@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './DisplayItem.css';
 
 function DisplayItem() {
+  const navigate = useNavigate();
   const [inventory, setInventory] = useState([]);
   const [search, setSearch] = useState('');
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +20,7 @@ function DisplayItem() {
   };
 
   const updateNavigate = (id) => {
-    window.location.href = `/updateitem/${id}`;
+    navigate(`/updateitem/${id}`);
   };
 
   const handleDeleteClick = (id) => {
@@ -49,14 +51,21 @@ function DisplayItem() {
   return (
     <div className="display-bg">
       <div className="display-header">
-        <h1 className="display-title">Inventory System</h1>
-        <input
-          className="display-search"
-          type="text"
-          placeholder="Search by name or category..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+                        <div className="display-header-top">
+                  <button className="back-btn" onClick={() => navigate('/manager-dashboard')}>
+                    ←
+                  </button>
+                  <h1 className="display-title">Inventory System</h1>
+                </div>
+        <div className="display-header-bottom">
+          <input
+            className="display-search"
+            type="text"
+            placeholder="Search by name or category..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
       </div>
       <div className="display-grid">
         {filteredInventory.length === 0 ? (

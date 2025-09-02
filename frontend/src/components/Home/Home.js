@@ -93,8 +93,8 @@ const Home = () => {
 
             {/* Desktop Navigation */}
             <div className="nav-links desktop-nav">
-              <a href="#" className="nav-link active">Home</a>
-              <a href="#" className="nav-link">Announcements</a>
+              <a href="/" className="nav-link active">Home</a>
+              <a href="/announcements" className="nav-link">Announcements</a>
               <a href="#" className="nav-link">Exporters Directory</a>
               <a href="#" className="nav-link">eMARKETPLACE</a>
               <a href="#" className="nav-link">Blog</a>
@@ -116,8 +116,8 @@ const Home = () => {
           {/* Mobile Navigation */}
           {mobileMenuOpen && (
             <div className="mobile-nav">
-              <a href="#" className="mobile-nav-link active">Home</a>
-              <a href="#" className="mobile-nav-link">Announcements</a>
+              <a href="/" className="mobile-nav-link active">Home</a>
+              <a href="/announcements" className="mobile-nav-link">Announcements</a>
               <a href="#" className="mobile-nav-link">Exporters Directory</a>
               <a href="#" className="mobile-nav-link">eMARKETPLACE</a>
               <a href="#" className="mobile-nav-link">Blog</a>

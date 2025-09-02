@@ -11,6 +11,7 @@ import UserDashboard from './components/UserDashboard/UserDashboard';
 import ManagerDashboard from './components/ManagerDashboard/ManagerDashboard';
 import UserProfile from './components/UserProfile/UserProfile';
 import Navi from './components/Navi/navi';
+import Announcements from './components/Announcements/Announcements';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <React.Fragment>
         <Routes>
           <Route path="/" element={<Home/>} />
+          <Route path="/announcements" element={<Announcements/>} />
           <Route path="/additem" element={<Additem/>} />
           <Route path="/allitems" element={<DisplayItem/>} />
           <Route path="/updateitem/:id" element={<UpdateItem/>} />

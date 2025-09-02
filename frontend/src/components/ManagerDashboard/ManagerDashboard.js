@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Chart from 'chart.js/auto';
 import axios from 'axios';
 import ManagerNavi from '../ManagerNavi/ManagerNavi';
 import './ManagerDashboard.css';
 
 function ManagerDashboard() {
+	const navigate = useNavigate();
 	const [active, setActive] = useState('overview');
 	const [stats, setStats] = useState({
 		totalInventory: 0,
@@ -20,12 +22,12 @@ function ManagerDashboard() {
 	const stockChartInstance = useRef(null);
 
 	const navigateTo = (path) => {
-		window.location.href = path;
+		navigate(path);
 	};
 
 	const logout = () => {
 		localStorage.clear();
-		navigateTo('/Login');
+		navigate('/Login');
 	};
 
 	const loadInventory = async () => {
